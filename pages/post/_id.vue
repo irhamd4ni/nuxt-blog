@@ -8,16 +8,19 @@
       {{ article }}
     </section>
     <main-menu></main-menu>
+    <foooter></foooter>
   </main>
 </template>
 
 <script>
   import axios from '~plugins/axios'
   import MainMenu from '~components/Menu'
+  import Foooter from '~components/Footer'
   export default {
     name: 'post',
     components: {
-      MainMenu
+      MainMenu,
+      Foooter
     },
     async asyncData ({params, error}) {
       console.log(params)

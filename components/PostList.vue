@@ -2,8 +2,8 @@
   <div>
     <div v-for="post in posts" :id="post.id">
       <nuxt-link class="no-underline" :to="{ name:'post-id', path: 'post/'+post.id, params: { id: post.id } }">
-        <h4 class="title">{{ post.title }}</h4>
-      <table class="title">
+        <h4>{{ post.title }}</h4>
+      <table class="preview-title">
         <tbody>
         <tr>
           <td>
@@ -35,20 +35,20 @@
   }
 </script>
 
-<style lang="css" scoped>
+<style lang="css">
   .no-underline {
     text-decoration: none;
   }
 
-  @media only screen and (mix-width: 1024px) {
-    .title {
-      opacity: 0.88;
-      transition: all 100ms ease;
+  @media only screen and (min-width: 1024px) {
+    .preview-title {
+      opacity: 0.77;
+      transition: all 100ms ease-in-out;
     }
 
-    .title:hover {
+    .preview-title:hover {
       opacity: 1;
+      transform: scale(1.111)
     }
-
   }
 </style>
