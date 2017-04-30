@@ -1,0 +1,54 @@
+<template>
+  <div>
+    <div v-for="post in posts" :id="post.id">
+      <nuxt-link class="no-underline" :to="{ name:'post-id', path: 'post/'+post.id, params: { id: post.id } }">
+        <h4 class="title">{{ post.title }}</h4>
+      <table class="title">
+        <tbody>
+        <tr>
+          <td>
+            <img class="preview img" src="http://placehold.it/140x100">
+          </td>
+          <td>
+            <p class="preview">{{ trunc(post.article) }}</p>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      </nuxt-link>
+      <div class="divider"></div>
+    </div>
+  </div>
+</template>
+
+<script>
+  export default {
+    props: ['posts'],
+    data () {
+      return {}
+    },
+    methods: {
+      trunc (text) {
+        return text.slice(0, 140) + '...'
+      }
+    }
+  }
+</script>
+
+<style lang="css" scoped>
+  .no-underline {
+    text-decoration: none;
+  }
+
+  @media only screen and (mix-width: 1024px) {
+    .title {
+      opacity: 0.88;
+      transition: all 100ms ease;
+    }
+
+    .title:hover {
+      opacity: 1;
+    }
+
+  }
+</style>
