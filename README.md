@@ -1,6 +1,6 @@
-# blog
+# Nuxt Blog
 
-> cool blog site
+> A simple blog made with nuxt.js
 
 ## Build Setup
 
