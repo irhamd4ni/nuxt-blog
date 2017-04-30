@@ -3,7 +3,7 @@
     <div v-for="post in posts" :id="post.id">
       <nuxt-link class="no-underline" :to="{ name:'post-id', path: 'post/'+post.id, params: { id: post.id } }">
         <h4>{{ post.title }}</h4>
-      <table class="preview-title">
+      <table>
         <tbody>
         <tr>
           <td>
