@@ -99,15 +99,13 @@ button {
   transition: all 100ms ease;
 }
 
-.material-icons {
-  font-size: 1.3rem;
-  color: #FFF5F2;
-  margin: 0 auto;
-  vertical-align: middle;
+button i {
+  text-align: center;
+  vertical-align: text-bottom;
 }
 
 button.rounded {
-  border-radius: 15px;
+  border-radius: 12px !important;
 }
 
 @media (hover: hover) {
@@ -127,6 +125,14 @@ button:active {
 }
 
 /* MENU */
+
+.bright { color: #FFF5F2 !important; }
+
+.smoll { font-size: 1.2em !important; }
+
+.norm { font-size: 2em !important }
+
+.big { font-size: 3.3em !important }
 
 .material-icons {
   font-size: 2em;

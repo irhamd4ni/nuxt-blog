@@ -3,18 +3,10 @@
     <div v-for="post in posts" :id="post.id">
       <nuxt-link class="no-underline" :to="{ name:'post-id', path: 'post/'+post.id, params: { id: post.id } }">
         <h4>{{ post.title }}</h4>
-      <table>
-        <tbody>
-        <tr>
-          <td>
-            <img class="preview img" src="http://placehold.it/140x100">
-          </td>
-          <td>
-            <p class="preview">{{ trunc(post.article) }}</p>
-          </td>
-        </tr>
-        </tbody>
-      </table>
+        <div class="m preview-box">
+          <img class="preview-item" src="http://placehold.it/140x100">
+          <p class="preview-item">{{ trunc(post.article) }}</p>
+        </div>
       </nuxt-link>
       <div class="divider"></div>
     </div>
@@ -40,6 +32,16 @@
     text-decoration: none;
   }
 
+  .preview-box {
+    display: flex;
+    flex-flow: row;
+  }
+
+  .preview-item {
+    margin: 1rem;
+    align-self: center;
+  }
+
   @media only screen and (min-width: 1024px) {
     .preview-title {
       opacity: 0.77;
@@ -50,5 +52,21 @@
       opacity: 1;
       transform: scale(1.111)
     }
+
   }
+
+  @media only screen and (max-width: 1024px) {
+    .preview-box {
+      display: flex;
+      flex-flow: column;
+    }
+
+    .preview-item {
+      margin: 0;
+      margin-top: 1rem;
+      align-self: center;
+    }
+  }
+
+
 </style>

@@ -5,7 +5,7 @@
       <div class="divider"></div>
     </header>
     <section>
-      {{ article }}
+      <p>{{ article }}</p>
     </section>
     <main-menu></main-menu>
     <foooter></foooter>

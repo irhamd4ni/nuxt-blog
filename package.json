@@ -1,7 +1,7 @@
 {
-  "name": "news",
-  "version": "1.0.0",
-  "description": "cool news site",
+  "name": "nuxt-blog",
+  "version": "0.2.0",
+  "description": "cool blog site",
   "author": "jai-dv <locasciojacopo@gmail.com>",
   "private": true,
   "scripts": {
